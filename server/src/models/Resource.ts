@@ -12,6 +12,7 @@ export interface IResource extends Document {
   updatedAt: Date;
 }
 
+
 const ResourceSchema = new Schema<IResource>({
   title: { type: String, required: true, trim: true },
   description: { type: String },
