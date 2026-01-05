@@ -50,7 +50,7 @@ const OtpInput: React.FC<OtpInputProps> = ({ length = 6, onOtpChange }) => {
           type="text"
           inputMode="numeric"
           value={digit}
-          ref={(el) => (inputRefs.current[index] = el)}
+          ref={(el) => { inputRefs.current[index] = el; }}
           onChange={(e) => handleChange(index, e.target.value)}
           onClick={() => handleClick(index)}
           onKeyDown={(e) => handleKeyDown(index, e)}

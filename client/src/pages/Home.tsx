@@ -7,9 +7,9 @@ const Home: React.FC = () => {
     <div className="min-h-screen">
       {/* Animated Background */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
-        <div className="absolute -top-40 -right-32 w-80 h-80 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
+        <div className="absolute -top-40 -right-32 w-80 h-80 bg-green-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
         <div className="absolute -bottom-40 -left-32 w-80 h-80 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
-        <div className="absolute top-40 left-1/2 w-80 h-80 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
+        <div className="absolute top-40 left-1/2 w-80 h-80 bg-red-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
       </div>
 
       {/* Hero Section */}
@@ -17,34 +17,34 @@ const Home: React.FC = () => {
         <div className="text-center max-w-6xl mx-auto">
           {/* Animated Logo/Badge */}
           <div className="mb-8 animate-bounce">
-            <div className="w-24 h-24 bg-gradient-to-r from-blue-500 to-purple-600 rounded-3xl flex items-center justify-center text-4xl text-white mx-auto shadow-2xl transform rotate-12 hover:rotate-0 transition-transform duration-500">
+            <div className="w-24 h-24 bg-gradient-to-r from-green-500 to-yellow-600 rounded-3xl flex items-center justify-center text-4xl text-white mx-auto shadow-2xl transform rotate-12 hover:rotate-0 transition-transform duration-500">
               📚
             </div>
           </div>
 
           {/* Main Headline */}
           <h1 className="text-6xl md:text-8xl font-black text-gray-900 mb-6 leading-tight">
-            Learn <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 animate-gradient">Together</span>,
+            Learn <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 via-yellow-600 to-red-600 animate-gradient">Together</span>,
             <br />
-            Grow <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-blue-500">Forever</span>
+            Grow <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-yellow-500">Forever</span>
           </h1>
 
           {/* Subheadline */}
           <p className="text-2xl md:text-3xl text-gray-600 mb-12 max-w-4xl mx-auto leading-relaxed">
-            Where every shared resource becomes someone's <span className="font-semibold text-purple-600">breakthrough moment</span>. 
+            Where every shared resource becomes someone's <span className="font-semibold text-green-600">breakthrough moment</span>.
             Join the revolution of collaborative learning.
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20">
-            <Link 
+            <Link
               to="/resources"
-              className="group relative bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-5 px-12 rounded-2xl transition-all duration-500 transform hover:scale-110 shadow-2xl hover:shadow-3xl overflow-hidden"
+              className="group relative bg-gradient-to-r from-green-600 to-yellow-600 hover:from-green-700 hover:to-yellow-700 text-white font-bold py-5 px-12 rounded-2xl transition-all duration-500 transform hover:scale-110 shadow-2xl hover:shadow-3xl overflow-hidden"
             >
               <span className="relative z-10">🚀 Launch Your Journey</span>
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
             </Link>
-            
+
             <button className="group border-2 border-gray-800 hover:border-transparent hover:bg-gray-900 text-gray-800 hover:text-white font-bold py-5 px-12 rounded-2xl transition-all duration-500 transform hover:scale-105 flex items-center gap-3">
               <span>✨</span>
               How It Works
@@ -89,7 +89,7 @@ const Home: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
             <h2 className="text-5xl md:text-7xl font-black text-gray-900 mb-6">
-              Why <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Shario</span>?
+              Why <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-yellow-600">Shario</span>?
             </h2>
             <p className="text-2xl text-gray-600 max-w-3xl mx-auto">
               We're reimagining how knowledge gets shared in the digital age
@@ -98,17 +98,17 @@ const Home: React.FC = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Left Column - Big Feature */}
-            <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-3xl p-8 transform hover:scale-105 transition-all duration-500 shadow-2xl">
+            <div className="bg-gradient-to-br from-green-50 to-yellow-50 rounded-3xl p-8 transform hover:scale-105 transition-all duration-500 shadow-2xl">
               <div className="text-6xl mb-6">🤖</div>
               <h3 className="text-3xl font-black text-gray-900 mb-4">AI-Powered Intelligence</h3>
               <p className="text-lg text-gray-600 mb-6">
-                Our AI doesn't just categorize - it understands context, suggests related resources, 
+                Our AI doesn't just categorize - it understands context, suggests related resources,
                 and even predicts what you'll want to learn next.
               </p>
               <div className="flex gap-2">
-                <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">Smart Tags</span>
-                <span className="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm font-medium">Auto-Summary</span>
-                <span className="px-3 py-1 bg-pink-100 text-pink-800 rounded-full text-sm font-medium">AI Recommendations</span>
+                <span className="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">Smart Tags</span>
+                <span className="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm font-medium">Auto-Summary</span>
+                <span className="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm font-medium">AI Recommendations</span>
               </div>
             </div>
 
@@ -131,7 +131,7 @@ const Home: React.FC = () => {
                   icon: '🔄',
                   title: 'Always Updated',
                   description: 'Fresh content daily from a thriving community of experts',
-                  color: 'from-purple-400 to-pink-500'
+                  color: 'from-yellow-400 to-red-500'
                 },
                 {
                   icon: '🌟',
@@ -140,7 +140,7 @@ const Home: React.FC = () => {
                   color: 'from-blue-400 to-cyan-500'
                 }
               ].map((feature, index) => (
-                <div 
+                <div
                   key={index}
                   className="bg-white rounded-2xl p-6 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl border border-gray-100"
                 >
@@ -159,7 +159,7 @@ const Home: React.FC = () => {
       {/* Interactive Demo Section */}
       <section className="py-28 bg-gradient-to-br from-gray-900 to-black text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute -top-1/2 -left-1/2 w-full h-full bg-gradient-conic from-transparent via-purple-500 to-transparent animate-spin-slow"></div>
+          <div className="absolute -top-1/2 -left-1/2 w-full h-full bg-gradient-conic from-transparent via-yellow-500 to-transparent animate-spin-slow"></div>
         </div>
 
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
@@ -178,31 +178,34 @@ const Home: React.FC = () => {
                 title: 'Share a Resource',
                 description: 'Post a link that helped you learn something amazing',
                 emoji: '📤',
-                color: 'bg-blue-500'
+                color: 'bg-green-500',
+                textColor: 'text-green-50'
               },
               {
                 step: '2',
                 title: 'AI Works Magic',
                 description: 'Automatically categorized and enriched with metadata',
                 emoji: '✨',
-                color: 'bg-purple-500'
+                color: 'bg-yellow-500',
+                textColor: 'text-yellow-900'
               },
               {
                 step: '3',
                 title: 'Community Benefits',
                 description: 'Thousands discover and learn from your contribution',
                 emoji: '👥',
-                color: 'bg-green-500'
+                color: 'bg-red-500',
+                textColor: 'text-red-50'
               }
             ].map((step, index) => (
-              <div 
+              <div
                 key={index}
                 className="relative group"
               >
                 <div className={`${step.color} rounded-2xl p-8 transform group-hover:scale-110 transition-all duration-500 shadow-2xl`}>
                   <div className="text-5xl mb-4">{step.emoji}</div>
-                  <div className="text-3xl font-black mb-2">{step.title}</div>
-                  <p className="text-blue-100">{step.description}</p>
+                  <div className={`text-3xl font-black mb-2 ${step.textColor === 'text-yellow-900' ? 'text-yellow-950' : 'text-white'}`}>{step.title}</div>
+                  <p className={step.textColor}>{step.description}</p>
                 </div>
                 <div className="absolute -top-4 -right-4 w-12 h-12 bg-white text-gray-900 rounded-full flex items-center justify-center text-xl font-black shadow-lg">
                   {step.step}
@@ -211,7 +214,7 @@ const Home: React.FC = () => {
             ))}
           </div>
 
-          <Link 
+          <Link
             to="/resources"
             className="inline-flex items-center gap-4 bg-white text-gray-900 hover:bg-gray-100 font-black text-xl py-6 px-16 rounded-2xl transition-all duration-500 transform hover:scale-105 shadow-2xl hover:shadow-3xl"
           >
@@ -226,16 +229,16 @@ const Home: React.FC = () => {
       <section className="py-20 bg-white relative">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-5xl md:text-6xl font-black text-gray-900 mb-8">
-            Ready to <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Level Up</span>?
+            Ready to <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-yellow-600">Level Up</span>?
           </h2>
           <p className="text-2xl text-gray-600 mb-12">
             Your next breakthrough is one shared resource away
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <Link 
+            <Link
               to="/resources"
-              className="group relative bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white font-black py-6 px-16 rounded-2xl transition-all duration-500 transform hover:scale-110 shadow-2xl hover:shadow-3xl overflow-hidden text-xl"
+              className="group relative bg-gradient-to-r from-green-500 to-yellow-500 hover:from-green-600 hover:to-yellow-600 text-white font-black py-6 px-16 rounded-2xl transition-all duration-500 transform hover:scale-110 shadow-2xl hover:shadow-3xl overflow-hidden text-xl"
             >
               <span className="relative z-10">🌟 Start Sharing Today</span>
               <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
@@ -253,7 +256,7 @@ const Home: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center space-x-3 mb-6 md:mb-0">
-              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center text-2xl">
+              <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-yellow-600 rounded-2xl flex items-center justify-center text-2xl">
                 📚
               </div>
               <div>
@@ -262,7 +265,7 @@ const Home: React.FC = () => {
               </div>
             </div>
             <div className="text-gray-400 text-center md:text-right">
-              <div className="text-lg mb-2">Made with 💙 for the global learning community</div>
+              <div className="text-lg mb-2">Made with ❤️ for the global learning community</div>
               <div className="text-sm">© 2024 Shario. All knowledge shared here.</div>
             </div>
           </div>
