@@ -12,8 +12,8 @@ export interface IResource extends Document {
   skills: string[];
   difficulty: DifficultyLevel;
   duration?: number; // in minutes
-  userId: mongoose.Types.ObjectId;
-  likes: mongoose.Types.ObjectId[];
+  userId: string;
+  likes: string[];
   rating: number;
   reviewCount: number;
   aiGenerated: boolean;
@@ -55,6 +55,10 @@ const ResourceSchema = new Schema<IResource>(
       type: [String],
       default: [],
       required: true,
+      validate: [
+        (val: string[]) => val.length <= 5,
+        '{PATH} exceeds the limit of 5'
+      ]
     },
     difficulty: {
       type: String,
@@ -66,12 +70,11 @@ const ResourceSchema = new Schema<IResource>(
       min: 0,
     },
     userId: {
-      type: Schema.Types.ObjectId,
-      ref: 'User',
+      type: String,
       required: true,
     },
     likes: {
-      type: [{ type: Schema.Types.ObjectId, ref: 'User' }],
+      type: [String],
       default: [],
     },
     rating: {
@@ -92,6 +95,10 @@ const ResourceSchema = new Schema<IResource>(
     tags: {
       type: [String],
       default: [],
+      validate: [
+        (val: string[]) => val.length <= 5,
+        '{PATH} exceeds the limit of 5'
+      ]
     },
     thumbnail: {
       type: String,
