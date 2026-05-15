@@ -1,26 +1,22 @@
 import express from 'express';
-import cors from 'cors';
-import helmet from 'helmet';
 import morgan from 'morgan';
+import { setupSecurity } from './middleware/security';
+import { auth } from './lib/auth';
+import { toNodeHandler } from "better-auth/node";
 
 const app = express();
 
 // Middleware
-app.use(helmet()); // Security headers
-app.use(cors({
-    origin: process.env.CLIENT_URL || 'http://localhost:5173',
-    credentials: true,
-}));
+setupSecurity(app);
 app.use(morgan('dev')); // Logging
 app.use(express.json()); // Parse JSON bodies
 app.use(express.urlencoded({ extended: true })); // Parse URL-encoded bodies
 
 // Import routes
-import authRoutes from './routes/auth';
 import resourceRoutes from './routes/resources';
 
 // API routes
-app.use('/api/auth', authRoutes);
+app.all('/api/auth/*', toNodeHandler(auth));
 app.use('/api/resources', resourceRoutes);
 
 // Health check
