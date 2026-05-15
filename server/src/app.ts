@@ -3,6 +3,7 @@ import morgan from 'morgan';
 import { setupSecurity } from './middleware/security';
 import { auth } from './lib/auth';
 import { toNodeHandler } from "better-auth/node";
+import { getHealthStatus } from './controllers/healthController';
 
 const app = express();
 
@@ -19,10 +20,8 @@ import resourceRoutes from './routes/resources';
 app.all('/api/auth/*', toNodeHandler(auth));
 app.use('/api/resources', resourceRoutes);
 
-// Health check
-app.get('/health', (_req, res) => {
-    res.json({ status: 'ok', message: 'Shario API is running' });
-});
+// Health check endpoint
+app.get('/health', getHealthStatus);
 
 // 404 handler
 app.use((_req, res) => {
